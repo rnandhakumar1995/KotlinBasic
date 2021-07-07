@@ -11,14 +11,14 @@ class MainScreen {
             |
         """.trimMargin()
             )
-            var option = scanner.nextInt()
+            val option = scanner.nextInt()
             when (option) {
                 1, 3, 4 -> with(ScopeFunctions()) {
-                    println("Applied values to index ${applyUsage()}")
-                    println("Run command to format date to string ${runUsage()}")
-                    println("Let the function return even numbers ${letUsage()}")
-                    println("Return 5 integer number. ALSO print them while creating ${alsoUsage().toMutableList()}")
-                    println("With list to sequences ${withUsage(listOf(1, 2, 3)).toMutableList()}")
+                    println("Applied values to index ${applyFibonacciValueToIndex()}")
+                    println("Run command to format date to string ${runFunctionToReturnDateAsString()}")
+                    println("Let the function return even numbers ${letTheFunctionReturnOnlyEvenNumber()}")
+                    println("Return 5 integer number. ALSO print them while creating ${createArrayAlsoPrintThem().toMutableList()}")
+                    println("With list to sequences ${withListAsSequence(listOf(1, 2, 3)).toMutableList()}")
                 }
                 2 -> with(HigherOrderFunction()) {
                     functionWithCallback{
