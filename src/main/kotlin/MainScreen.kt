@@ -7,13 +7,15 @@ class MainScreen {
             println(
                 """Select an option 
             |1.Scope functions
+            |2.Higher Order Function
+            |3. Class & Constructor
             |0. Exit
             |
         """.trimMargin()
             )
             val option = scanner.nextInt()
             when (option) {
-                1, 3, 4 -> with(ScopeFunctions()) {
+                1, 4 -> with(ScopeFunctions()) {
                     println("Applied values to index ${applyFibonacciValueToIndex()}")
                     println("Run command to format date to string ${runFunctionToReturnDateAsString()}")
                     println("Let the function return even numbers ${letTheFunctionReturnOnlyEvenNumber()}")
@@ -21,9 +23,12 @@ class MainScreen {
                     println("With list to sequences ${withListAsSequence(listOf(1, 2, 3)).toMutableList()}")
                 }
                 2 -> with(HigherOrderFunction()) {
-                    functionWithCallback{
-                        println("Choosen option is $option")
+                    functionWithCallback {
+                        println("Chosen option is $option")
                     }
+                }
+                3 -> with(Student("Nandha", "Kumar", "Ramasamy")){
+
                 }
             }
         } while (option in 1..3)
