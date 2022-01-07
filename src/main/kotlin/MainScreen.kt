@@ -15,7 +15,7 @@ class MainScreen {
             )
             val option = scanner.nextInt()
             when (option) {
-                1, 4 -> with(ScopeFunctions()) {
+                1 -> with(ScopeFunctions()) {
                     println("Applied values to index ${applyFibonacciValueToIndex()}")
                     println("Run command to format date to string ${runFunctionToReturnDateAsString()}")
                     println("Let the function return even numbers ${letTheFunctionReturnOnlyEvenNumber()}")
@@ -27,11 +27,11 @@ class MainScreen {
                         println("Chosen option is $option")
                     }
                 }
-                3 -> with(Student("Nandha", "Kumar", "Ramasamy")){
+                3 -> with(Student("Nandha", lastName = "Ramasamy")) {
 
                 }
             }
-        } while (option in 1..3)
+        } while (option in 1..10)
     }
 }
 
@@ -41,8 +41,9 @@ data class Element(
 )
 
 fun main(vararg args: String) {
-    val mainScreen = MainScreen()
-    mainScreen.showOptions()
+//    val mainScreen = MainScreen()
+//    mainScreen.showOptions()
+    LeetCode().merge(intArrayOf(2, 5, 6), 3, intArrayOf(1, 2, 3, 0, 0, 0), 3)
 //    println(Codility().solution(9))
 //    println(Codility().solution(intArrayOf(1, 2, 3, 4), 4).toMutableSet())
 //    println(Codility().solution(intArrayOf(9, 3, 9, 3, 9, 7, 9)))
